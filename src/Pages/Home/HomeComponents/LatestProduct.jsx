@@ -1,15 +1,16 @@
-import axios from 'axios'
+// import axios from 'axios'
 import React from 'react'
 import { useState } from 'react'
 import LatestCard from './LatestCard'
+import ShoesData from '../../../Data/ShoesData.json'
 
 
 const LatestProduct = () => {
-    const [latest, setLatest] = useState([])
+    const [latest, setLatest] = useState(ShoesData)
 
 
-    axios.get('http://127.0.0.1:5500/src/Data/ShoesData.json')
-    .then(res=> setLatest(res.data))
+    // axios.get('http://127.0.0.1:5500/src/Data/ShoesData.json')
+    // .then(res=> setLatest(res.data))
 
   return (
     <>

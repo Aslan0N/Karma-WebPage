@@ -1,15 +1,16 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+// import axios from "axios";
+import React, {  useState } from "react";
 import WeekCard from "./WeekCard";
+import weekData from '../../../Data/WeekData.json'
 
 const Week = () => {
-  const [weekData, setWeekData] = useState([]);
+  const [weeksData, setWeekData] = useState(weekData);
 
-  useEffect(() => {
-    axios
-      .get("http://127.0.0.1:5500/src/Data/WeekData.json")
-      .then((res) => setWeekData(res.data));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("http://127.0.0.1:5500/src/Data/WeekData.json")
+  //     .then((res) => setWeekData(res.data));
+  // }, []);
 
   return (
     <>
@@ -26,8 +27,8 @@ const Week = () => {
           <div className="row">
             <div className="col-12 col-sm-12 col-md-6 col-lg-8">
               <div className="container-fluid">
-                <div className="row g-5">
-                  {weekData.map((item, index) => {
+                <div className="row g-5 mt-3">
+                  {weeksData.map((item, index) => {
                     return <WeekCard week={item} key={index} />;
                   })}
                 </div>

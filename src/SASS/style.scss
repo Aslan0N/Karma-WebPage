@@ -247,6 +247,7 @@ header{
         .row{
             .col-12{
                 overflow: hidden;
+                height: 500px;
             }
             .img1{
                 background-image: url(	https://preview.colorlib.com/theme/karma/img/exclusive.jpg);
@@ -363,11 +364,95 @@ header{
     .container-fluid{
         .col-12{
             .card{
-                
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: center !important;
                 .card-title{
                     font-size: 11px;
                     color: #000;
                 }
+            }
+        }
+    }
+}
+.hv_orange{
+    transition: all 400ms;
+    cursor: pointer;
+    &:hover{
+        color: #ffba00 !important;
+    }
+}
+footer{
+    width: 100%;
+    height: 80vh;
+    background-color: #222;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    .container{
+        .row{
+            .col-12{
+                h4{
+                    color: #fff;
+                    font-weight: 600;
+                }
+                p{
+                    color: #777;
+                    font-size: 14px;
+                }
+                form{
+                    width: 100%;
+                    height: 20%;
+                    background-color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding-left: 14px;
+                    input{
+                        border: none;
+                        outline: none;
+                        background-color: #fff;
+                        width: 80%;
+                        font-size: 14px;
+                        &::placeholder{
+                            color: #b6b6b6;
+                        }
+                    }
+                    button{
+                        border: none;
+                        outline: none;
+                        background: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+                        color: #fff;
+                        width: 20%;
+                        height: 100%;
+                    }
+                }
+                .i-con{
+                    .fa-facebook-f{
+                        margin-left: 0;
+                    }
+                    i{
+                        color: #989898;
+                        margin-left: 15px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        margin: 20px 0;
+        .end{
+            text-align: center;
+            color: #777;
+            margin-bottom: -20px;
+            font-size: 14px;
+            span{
+                color: #ffba00;
+            }
+            i{
+                color: #ffba00;
             }
         }
     }
